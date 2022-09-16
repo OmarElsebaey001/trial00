@@ -12,7 +12,6 @@ def diff_golden_to_output( x ):
     try:
         output_file = "output_dir\\"+ x 
         golden_file = "golden_dir\\"+ x 
-        print("\tWill compare : ", output_file,golden_file) 
         result = filecmp.cmp(output_file,golden_file,shallow=False)
         if result == True :
             return  "YES"
